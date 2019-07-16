@@ -1,14 +1,17 @@
 package dev.m13d.weatherforecast.ui.weather.current
 
 import androidx.lifecycle.ViewModel;
+import dev.m13d.weatherforecast.data.provider.UnitProvider
 import dev.m13d.weatherforecast.data.repository.ForecastRepository
 import dev.m13d.weatherforecast.internal.UnitSystem
 import dev.m13d.weatherforecast.internal.lazyDeferred
+import java.util.*
 
 class CurrentWeatherViewModel(
-    private val forecastRepository: ForecastRepository
+    private val forecastRepository: ForecastRepository,
+    unitProvider: UnitProvider
 ) : ViewModel() {
-    private val unitSystem = UnitSystem.METRIC//get from settings later
+    private val unitSystem = unitProvider.getUnitSystem()
 
     val isMetric: Boolean
         get() = unitSystem == UnitSystem.METRIC
