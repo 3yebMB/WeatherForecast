@@ -9,12 +9,12 @@ data class CurrentWeatherEntry(
     @SerializedName("feelslike_c")
     val feelslikeC: Double,
     @SerializedName("feelslike_f")
-    val feelslikeF: Int,
+    val feelslikeF: Double,
     @SerializedName("gust_kph")
-    val gustKph: Int,
+    val gustKph: Double,
     @SerializedName("gust_mph")
     val gustMph: Double,
-    val humidity: Int,
+    val humidity: Double,
     @SerializedName("is_day")
     val isDay: Int,
     @SerializedName("last_updated")
@@ -30,16 +30,16 @@ data class CurrentWeatherEntry(
     @SerializedName("pressure_mb")
     val pressureMb: Int,
     @SerializedName("temp_c")
-    val tempC: Int,
+    val tempC: Double,
     @SerializedName("temp_f")
-    val tempF: Int,
+    val tempF: Double,
     val uv: Int,
     @SerializedName("vis_km")
-    val visKm: Int,
+    val visKm: Double,
     @SerializedName("vis_miles")
-    val visMiles: Int,
+    val visMiles: Double,
     @SerializedName("wind_degree")
-    val windDegree: Int,
+    val windDegree: Double,
     @SerializedName("wind_dir")
     val windDir: String,
     @SerializedName("wind_kph")
