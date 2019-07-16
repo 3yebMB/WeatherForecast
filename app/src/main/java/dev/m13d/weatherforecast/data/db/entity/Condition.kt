@@ -1,4 +1,4 @@
-package dev.m13d.weatherforecast.data.response
+package dev.m13d.weatherforecast.data.db.entity
 
 
 import com.google.gson.annotations.SerializedName
