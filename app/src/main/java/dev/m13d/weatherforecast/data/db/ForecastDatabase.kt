@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
+import androidx.room.TypeConverters
 import dev.m13d.weatherforecast.data.db.entity.CurrentWeatherEntry
 import dev.m13d.weatherforecast.data.db.entity.FutureWeatherEntry
 import dev.m13d.weatherforecast.data.db.entity.WeatherLocation
@@ -14,7 +14,7 @@ import dev.m13d.weatherforecast.data.db.entity.WeatherLocation
     version = 1
 )
 
-@TypeConverter(LocalDateConverter::class)
+@TypeConverters(LocalDateConverter::class)
 abstract class ForecastDatabase : RoomDatabase() {
     abstract fun currentWeatherDao(): CurrentWeatherDao
     abstract fun futureWeatherDao(): FutureWeatherDao
