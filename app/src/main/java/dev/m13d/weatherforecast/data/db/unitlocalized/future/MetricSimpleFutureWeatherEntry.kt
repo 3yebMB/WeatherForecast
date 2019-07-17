@@ -3,7 +3,7 @@ package dev.m13d.weatherforecast.data.db.unitlocalized.future
 import androidx.room.ColumnInfo
 import org.threeten.bp.LocalDate
 
-class MetricSimpleFutureWeatherEntry(
+data class MetricSimpleFutureWeatherEntry (
     @ColumnInfo(name = "date")
     override val date: LocalDate,
     @ColumnInfo(name = "avgtempC")

@@ -1,6 +1,5 @@
 package dev.m13d.weatherforecast.data.db.entity
 
-
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,18 +9,12 @@ const val CURRENT_WEATHER_ID = 0
 
 @Entity(tableName = "current_weather")
 data class CurrentWeatherEntry(
-//    val cloud: Int,
     @Embedded(prefix = "condition_")
     val condition: Condition,
     @SerializedName("feelslike_c")
     val feelslikeC: Double,
     @SerializedName("feelslike_f")
     val feelslikeF: Double,
-    @SerializedName("gust_kph")
-    val gustKph: Double,
-    @SerializedName("gust_mph")
-    val gustMph: Double,
-//    val humidity: Int,
     @SerializedName("is_day")
     val isDay: Int,
     @SerializedName("precip_in")
@@ -32,7 +25,6 @@ data class CurrentWeatherEntry(
     val tempC: Double,
     @SerializedName("temp_f")
     val tempF: Double,
-    val uv: Int,
     @SerializedName("vis_km")
     val visKm: Double,
     @SerializedName("vis_miles")
