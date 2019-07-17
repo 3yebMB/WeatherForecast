@@ -1,6 +1,5 @@
 package dev.m13d.weatherforecast.data.network
 
-import android.provider.CalendarContract
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dev.m13d.weatherforecast.data.network.response.CurrentWeatherResponse
 import dev.m13d.weatherforecast.data.network.response.FutureWeatherResponse

@@ -25,7 +25,7 @@ data class WeatherLocation(
     @PrimaryKey(autoGenerate = false)
     var id: Int = WEATHER_LOCATION_ID
 
-    val zoneDateTime: ZonedDateTime
+    val zonedDateTime: ZonedDateTime
         get() {
             val instant = Instant.ofEpochSecond(localtimeEpoch)
             val zoneId = ZoneId.of(tzId)
