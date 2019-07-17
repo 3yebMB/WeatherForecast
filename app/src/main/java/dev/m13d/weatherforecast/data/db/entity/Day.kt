@@ -1,4 +1,4 @@
-package dev.m13d.weatherforecast.data.network.response
+package dev.m13d.weatherforecast.data.db.entity
 
 
 import androidx.room.Embedded

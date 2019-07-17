@@ -1,4 +1,4 @@
-package dev.m13d.weatherforecast.data.db.unitlocalized
+package dev.m13d.weatherforecast.data.db.unitlocalized.current
 
 import androidx.room.ColumnInfo
 

@@ -1,8 +1,8 @@
 package dev.m13d.weatherforecast.data.network.response
 
 
-import com.google.gson.annotations.SerializedName
+import dev.m13d.weatherforecast.data.db.entity.FutureWeatherEntry
 
-data class Forecast(
-    val forecastday: List<Forecastday>
+data class ForecastDaysContainer(
+    val entries: List<FutureWeatherEntry>
 )
