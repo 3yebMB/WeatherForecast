@@ -5,7 +5,6 @@ import dev.m13d.weatherforecast.data.provider.UnitProvider
 import dev.m13d.weatherforecast.data.repository.ForecastRepository
 import dev.m13d.weatherforecast.internal.UnitSystem
 import dev.m13d.weatherforecast.internal.lazyDeferred
-import java.util.*
 
 class CurrentWeatherViewModel(
     private val forecastRepository: ForecastRepository,
@@ -18,5 +17,9 @@ class CurrentWeatherViewModel(
 
     val weather by lazyDeferred {
         forecastRepository.getCurrentWeather(isMetric)
+    }
+
+    val weatherLocation by lazyDeferred {
+        forecastRepository.getWeatherLocation()
     }
 }
