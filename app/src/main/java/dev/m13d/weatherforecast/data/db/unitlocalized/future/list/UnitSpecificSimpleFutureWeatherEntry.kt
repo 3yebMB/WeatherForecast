@@ -1,4 +1,4 @@
-package dev.m13d.weatherforecast.data.db.unitlocalized.future
+package dev.m13d.weatherforecast.data.db.unitlocalized.future.list
 
 import org.threeten.bp.LocalDate
 

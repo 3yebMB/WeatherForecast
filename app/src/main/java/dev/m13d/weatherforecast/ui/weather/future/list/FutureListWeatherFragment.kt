@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import dev.m13d.weatherforecast.R
-import dev.m13d.weatherforecast.data.db.unitlocalized.future.UnitSpecificSimpleFutureWeatherEntry
+import dev.m13d.weatherforecast.data.db.unitlocalized.future.list.UnitSpecificSimpleFutureWeatherEntry
 import dev.m13d.weatherforecast.ui.base.ScopedFragment
 import kotlinx.android.synthetic.main.future_list_weather_fragment.*
 import kotlinx.coroutines.Dispatchers

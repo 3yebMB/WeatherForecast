@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import com.xwray.groupie.kotlinandroidextensions.Item
 import com.xwray.groupie.kotlinandroidextensions.ViewHolder
 import dev.m13d.weatherforecast.R
-import dev.m13d.weatherforecast.data.db.unitlocalized.future.MetricSimpleFutureWeatherEntry
-import dev.m13d.weatherforecast.data.db.unitlocalized.future.UnitSpecificSimpleFutureWeatherEntry
+import dev.m13d.weatherforecast.data.db.unitlocalized.future.list.MetricSimpleFutureWeatherEntry
+import dev.m13d.weatherforecast.data.db.unitlocalized.future.list.UnitSpecificSimpleFutureWeatherEntry
 import dev.m13d.weatherforecast.internal.glide.GlideApp
 import kotlinx.android.synthetic.main.item_future_weather.*
 import org.threeten.bp.format.DateTimeFormatter
