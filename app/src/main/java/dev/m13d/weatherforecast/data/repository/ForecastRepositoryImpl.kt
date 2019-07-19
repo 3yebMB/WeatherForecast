@@ -6,7 +6,8 @@ import dev.m13d.weatherforecast.data.db.FutureWeatherDao
 import dev.m13d.weatherforecast.data.db.WeatherLocationDao
 import dev.m13d.weatherforecast.data.db.entity.WeatherLocation
 import dev.m13d.weatherforecast.data.db.unitlocalized.current.UnitSpecificCurrentWeatherEntry
-import dev.m13d.weatherforecast.data.db.unitlocalized.future.UnitSpecificSimpleFutureWeatherEntry
+import dev.m13d.weatherforecast.data.db.unitlocalized.future.detail.UnitSpecificDetailFutureWeatherEntry
+import dev.m13d.weatherforecast.data.db.unitlocalized.future.list.UnitSpecificSimpleFutureWeatherEntry
 import dev.m13d.weatherforecast.data.network.FORECAST_DAYS_COUNT
 import dev.m13d.weatherforecast.data.network.WeatherNetworkDataSource
 import dev.m13d.weatherforecast.data.network.response.CurrentWeatherResponse
@@ -58,16 +59,16 @@ class ForecastRepositoryImpl(
         }
     }
 
-//    override suspend fun getFutureWeatherByDate(
-//        date: LocalDate,
-//        metric: Boolean
-//    ): LiveData<out UnitSpecificDetailFutureWeatherEntry> {
-//        return withContext(Dispatchers.IO) {
-//            initWeatherData()
-//            return@withContext if (metric) futureWeatherDao.getDetailedWeatherByDateMetric(date)
-//            else futureWeatherDao.getDetailedWeatherByDateImperial(date)
-//        }
-//    }
+    override suspend fun getFutureWeatherByDate(
+        date: LocalDate,
+        metric: Boolean
+    ): LiveData<out UnitSpecificDetailFutureWeatherEntry> {
+        return withContext(Dispatchers.IO) {
+            initWeatherData()
+            return@withContext if (metric) futureWeatherDao.getDetailWeatherByDateMetric(date)
+            else futureWeatherDao.getDetailWeatherByDateImperial(date)
+        }
+    }
 
     override suspend fun getWeatherLocation(): LiveData<WeatherLocation> {
         return withContext(Dispatchers.IO) {

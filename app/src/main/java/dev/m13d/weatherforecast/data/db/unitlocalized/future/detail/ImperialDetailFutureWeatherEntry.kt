@@ -25,4 +25,4 @@ data class ImperialDetailFutureWeatherEntry(
     override val avgVisibilityDistance: Double,
     @ColumnInfo(name = "uv")
     override val uv: Double
-) : UnitSpecificDetailFutureWetherEntry
+) : UnitSpecificDetailFutureWeatherEntry

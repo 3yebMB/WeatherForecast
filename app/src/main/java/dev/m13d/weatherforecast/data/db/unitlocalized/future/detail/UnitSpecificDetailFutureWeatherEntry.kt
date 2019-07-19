@@ -2,7 +2,7 @@ package dev.m13d.weatherforecast.data.db.unitlocalized.future.detail
 
 import org.threeten.bp.LocalDate
 
-interface UnitSpecificDetailFutureWetherEntry {
+interface UnitSpecificDetailFutureWeatherEntry {
     val date: LocalDate
     val maxTemperature: Double
     val minTemperature: Double
